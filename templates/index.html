@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>ChesCraft</title>
+	<link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+	<header>
+		ChesCraft 第一季
+	</header>
+	<main>
+		<iframe width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen data-bind="attr: {src: currentPlaylist}"></iframe>
+
+		<div id="prev" data-bind="click: prevYoutuber">上一個</div>
+		<div id="next" data-bind="click: nextYoutuber">下一個</div>
+
+		<ul data-bind="foreach: seasonOne">
+			<li data-bind="text: name, click: $parent.changeYoutuber"></li>
+		</ul>
+
+		<center>
+			<a class="download" href="https://storage.googleapis.com/simple-file-system/chescraft-1.zip" download>地圖下載</a>
+		</center>
+		
+	</main>
+	<script src="/static/knockout.js"></script>
+	<script src="/static/jquery-3.3.1.min.js"></script>
+	<script src="/static/model.js"></script>
+	<script src="/static/youtube.js"></script>
+</body>
+</html>

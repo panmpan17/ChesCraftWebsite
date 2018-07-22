@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	font-size: 30px;
+	line-height: 50px;
+	font-weight: 900;
+	font-family: monospace;
+	text-align: center;
+	background: #063044;
+	color: white;
+}
+
+iframe {
+	width: 100%;
+	height: 460px;
+	margin-bottom: 10px;
+}
+
+#next, #prev {
+	position: fixed;
+	padding: 7px 15px;
+	text-decoration: none;
+	color: white;
+	background: #DDD;
+	bottom: 10px;
+}
+
+#prev {
+	left: 20px;
+}
+
+#next {
+	right: 20px;
+}
+
+ul {
+	list-style: none;
+	display: none;
+	padding: 0;
+}
+
+ul > li {
+	margin: 2.5%;
+	width: 95%;
+	text-align: center;
+	color: white;
+	background: #063044;
+	font-family: monospace;
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+}
+
+.download {
+	padding: 7px 15px;
+	text-decoration: none;
+	color: white;
+	background: #468BE6;
+	border-radius: 5px;
+	font-size: 20px;
+	opacity: .7;
+}
+
+.download:hover, #next:hover, #prev:hover {
+	opacity: 1;
+}
+
+@media screen and (min-width: 760px) {
+	#next, #prev {
+		position: static;
+		margin: 2.5%;
+		width: 95%;
+		text-align: center;
+		font-size: 28px;
+		line-height: 60px;
+	}
+
+	.download {
+		font-size: 24px;
+		line-height: 50px;
+		height: 50px;
+	}
+
+	header {
+		font-size: 48px;
+		height: 90px;
+		line-height: 90px;
+	}
+
+	iframe {
+		height: 600px;
+	}
+
+	ul {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	main > * {
+		float: left;
+	}
+
+	iframe {
+		width: 70%;
+		height: 700px;
+	}
+
+	ul {
+		margin: 0;
+		width: 30%;
+	}
+
+	#prev, #next,
+	.download {
+		width: 28%;
+		margin: 10px;
+	}
+}

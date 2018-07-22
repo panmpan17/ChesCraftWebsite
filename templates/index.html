@@ -13,18 +13,19 @@
 	<main>
 		<iframe width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen data-bind="attr: {src: currentPlaylist}"></iframe>
 
-		<div id="prev" data-bind="click: prevYoutuber">上一個</div>
-		<div id="next" data-bind="click: nextYoutuber">下一個</div>
+		<section>
+			<div id="prev" data-bind="click: prevYoutuber">< 上一個</div>
 
-		<ul data-bind="foreach: seasonOne">
-			<li data-bind="text: name, click: $parent.changeYoutuber"></li>
-		</ul>
-
-		<center>
 			<a class="download" href="https://storage.googleapis.com/simple-file-system/chescraft-1.zip" download>地圖下載</a>
-		</center>
-		
+
+			<div id="next" data-bind="click: nextYoutuber">下一個 ></div>
+
+			<ul data-bind="foreach: seasonOne">
+				<li data-bind="text: name, click: $parent.changeYoutuber"></li>
+			</ul>
+		</section>
 	</main>
+	<br><br>
 	<script src="/static/knockout.js"></script>
 	<script src="/static/jquery-3.3.1.min.js"></script>
 	<script src="/static/model.js"></script>

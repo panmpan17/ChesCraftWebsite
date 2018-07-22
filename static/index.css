@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	font-family: monospace;
 }
 
 html, body {
@@ -13,10 +14,15 @@ header {
 	font-size: 30px;
 	line-height: 50px;
 	font-weight: 900;
-	font-family: monospace;
 	text-align: center;
 	background: #063044;
 	color: white;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 30px;
 }
 
 iframe {
@@ -26,74 +32,76 @@ iframe {
 }
 
 #next, #prev {
-	position: fixed;
+	width: 31.33%;
 	padding: 7px 15px;
+	margin: 0 1%;
 	text-decoration: none;
 	color: white;
 	background: #DDD;
-	bottom: 10px;
-}
-
-#prev {
-	left: 20px;
-}
-
-#next {
-	right: 20px;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: .7;
 }
 
 ul {
 	list-style: none;
-	display: none;
 	padding: 0;
+	width: 100%;
 }
 
 ul > li {
+	opacity: .7;
+	cursor: pointer;
 	margin: 2.5%;
 	width: 95%;
 	text-align: center;
 	color: white;
 	background: #063044;
-	font-family: monospace;
 	height: 50px;
 	line-height: 50px;
 	font-size: 24px;
 }
 
 .download {
+	width: 31.33%;
 	padding: 7px 15px;
+	margin: 0 1%;
 	text-decoration: none;
 	color: white;
 	background: #468BE6;
 	border-radius: 5px;
 	font-size: 20px;
 	opacity: .7;
+	cursor: pointer;
 }
 
-.download:hover, #next:hover, #prev:hover {
+.download:hover, #next:hover, #prev:hover, ul > li:hover {
 	opacity: 1;
 }
 
 @media screen and (min-width: 760px) {
 	#next, #prev {
+		order: 0;
+		display: inline-block;
 		position: static;
-		margin: 2.5%;
-		width: 95%;
+		margin: 1%;
+		width: 46%;
 		text-align: center;
-		font-size: 28px;
-		line-height: 60px;
+		font-size: 20px;
 	}
 
 	.download {
-		font-size: 24px;
-		line-height: 50px;
-		height: 50px;
+		order: 1;
+		font-size: 20px;
+		line-height: 46px;
+		height: 46px;
 	}
 
 	header {
-		font-size: 48px;
-		height: 90px;
-		line-height: 90px;
+		font-size: 24px;
+		height: 40px;
+		line-height: 40px;
 	}
 
 	iframe {
@@ -102,6 +110,13 @@ ul > li {
 
 	ul {
 		display: block;
+		margin: 0;
+	}
+
+	ul > li {
+		display: inline-block;
+		margin: 1%;
+		width: 46%;
 	}
 }
 
@@ -110,19 +125,26 @@ ul > li {
 		float: left;
 	}
 
+	section {
+		width: 30%;
+	}
+
 	iframe {
 		width: 70%;
 		height: 700px;
 	}
 
 	ul {
-		margin: 0;
-		width: 30%;
+		width: 100%;
+	}
+
+	ul > li {
+		width: 96%;
 	}
 
 	#prev, #next,
 	.download {
-		width: 28%;
-		margin: 10px;
+		width: 96%;
+		margin: 1%;
 	}
 }

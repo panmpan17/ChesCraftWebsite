@@ -22,6 +22,10 @@ REDIRECT = {
 def index():
     return flask.render_template("index.html")
 
+@app.route("/store")
+def store():
+    return flask.redirect("https://cashier.ecpay.com.tw/store/chescraft")
+
 @app.route("/r/<string:name>")
 def yt_redirect(name):
     if name in REDIRECT:
